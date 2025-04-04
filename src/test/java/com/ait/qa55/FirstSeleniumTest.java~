@@ -6,11 +6,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
 public class FirstSeleniumTest {
    WebDriver driver; // ob'yavivli peremennuyu do before method
-
     //before method-setUp
     @BeforeMethod
     public void setUp(){
@@ -18,8 +15,6 @@ public class FirstSeleniumTest {
         driver.manage().window().maximize(); //maximalnoe okno - na ves' ekran
         //driver.get("https://google.com");//without history
         driver.navigate().to("https://ilcarro.web.app");//with history
-        // zhdem chtobi vse elementi progrusilis' (wait for all elements on the site to load before starting test)
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to("https://google.com");
         driver.navigate().back();
         driver.navigate().refresh();// obnovlenie stranici/peresagruska

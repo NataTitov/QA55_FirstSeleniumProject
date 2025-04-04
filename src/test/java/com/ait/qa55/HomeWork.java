@@ -7,7 +7,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class HomeWork {
-
     WebDriver driver;
 
     @BeforeMethod
@@ -17,7 +16,6 @@ public class HomeWork {
         driver.navigate().to("https://google.com");
         driver.navigate().back();
     }
-
     @Test
     public void openGooleTest(){
         System.out.println("Hello!");
@@ -26,5 +24,4 @@ public class HomeWork {
     public void tearDown(){
         driver.quit();
     }
-
 }
