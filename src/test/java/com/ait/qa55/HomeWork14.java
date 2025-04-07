@@ -50,6 +50,36 @@ public class HomeWork14 {
         driver.findElement(By.className("header-menu"));
         driver.findElement(By.className("language-selector"));
 
+    }
+    // найдите 10 элементов на странице при помощи стратегии
+    // By.cssSelector и при помощи Seample стратегии(по аналогии как в классе)
+    @Test
+    public void findElementByCssSelector() {
+        //tagName == css
+        driver.findElement(By.cssSelector("li"));
+        driver.findElement(By.cssSelector("div"));
+
+        //id -> css(#)
+        driver.findElement(By.cssSelector("#mob-menu-button"));
+
+        //className -> css(.)
+        driver.findElement(By.cssSelector(".header-menu"));
+        driver.findElement(By.cssSelector(".top-menu"));
+
+        //[attr='value']
+        driver.findElement(By.cssSelector("[href='/computers']"));
+        driver.findElement(By.cssSelector("[href='/desktops']"));
+        driver.findElement(By.cssSelector("[href='/books']"));
+
+
+        //contains -> *
+        driver.findElement(By.cssSelector("[href*='/gift']"));
+
+        //start ->^
+        driver.findElement(By.cssSelector("[href^='/camera']"));
+
+        //end on ->$
+        driver.findElement(By.cssSelector("[href$='/phones']"));
 
     }
 }
