@@ -27,7 +27,6 @@ public class HomeWork14 {
 
     @Test
     public void findElementBySimpleLocators() {
-        // by id
         driver.findElement(By.id("flyout-cart"));
         driver.findElement(By.id("small-searchterms"));
         driver.findElement(By.id("mob-menu-button"));
@@ -40,8 +39,8 @@ public class HomeWork14 {
         driver.findElement(By.id("poll-block-1"));
 
         //by className
-       driver.findElement(By.className("master-wrapper-page"));
-       driver.findElement(By.className("master-wrapper-content"));
+        driver.findElement(By.className("master-wrapper-page"));
+        driver.findElement(By.className("master-wrapper-content"));
         driver.findElement(By.className("header"));
         driver.findElement(By.className("header-logo"));
         driver.findElement(By.className("header-links-wrapper"));
