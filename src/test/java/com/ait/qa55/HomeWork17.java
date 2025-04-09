@@ -63,6 +63,5 @@ public class HomeWork17 {
 
         //following-sibling
         driver.findElement(By.xpath("//h3/following-sibling::*"));
-
     }
 }
