@@ -71,7 +71,6 @@ public class HomeWork14 {
         driver.findElement(By.cssSelector("[href='/desktops']"));
         driver.findElement(By.cssSelector("[href='/books']"));
 
-
         //contains -> *
         driver.findElement(By.cssSelector("[href*='/gift']"));
 
@@ -79,7 +78,7 @@ public class HomeWork14 {
         driver.findElement(By.cssSelector("[href^='/camera']"));
 
         //end on ->$
-        driver.findElement(By.cssSelector("[href$='/phones']"));
+        driver.findElement(By.cssSelector("[href$='/register']"));
 
     }
 }

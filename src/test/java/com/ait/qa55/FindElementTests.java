@@ -61,7 +61,7 @@ public class FindElementTests {
     }
 
     @Test
-    public void findElementByCssSelector() {
+    public void findElementByCssSelector() { // bystriy, gibkiy, sostavnoy
         //tagName == css
         //driver.findElement(By.tagName("h1"));
         driver.findElement(By.cssSelector("h1"));
@@ -85,7 +85,59 @@ public class FindElementTests {
 
         //end on ->$
         driver.findElement(By.cssSelector("[href$='/search']"));
+
+        //tad + id - selectorHub
+        driver.findElement(By.cssSelector("input#city"));
+
+        //tad + class
+        driver.findElement(By.cssSelector("div.mobile-header"));
+        driver.findElement(By.cssSelector("div.search-card"));
+
+        //tag + id + [attr = 'value']
+        driver.findElement(By.cssSelector("input#city[type='text']"));
+
     }
 
+    //*[@arrt='value']
+    @Test
+    public void findElementByXpath() {
+        //id -> xpath - //*[@id='value']
+        driver.findElement(By.xpath("//input[@id='city']"));
+
+        //tag -> xpath - //tag
+        driver.findElement(By.xpath("//h1"));
+
+        //className -> xpath - //*[@class='value']
+        //driver.findElement(By.className("header"));
+        driver.findElement(By.xpath("//div[@class='header']"));
+
+        //text //*[contains(.,'Text')] - //poisk po tekstu po chastichnomu sovpadeniyu
+        driver.findElement(By.xpath("//h2[contains(.,'Yalla')]"));
+
+        //contains -> //*[text()='Text'] - poisk po tochnomu sovpadeniyu
+        driver.findElement(By.xpath("//h2[text()='Type your data and hit Yalla!']"));
+        driver.findElement(By.xpath("//h2[.='Type your data and hit Yalla!']"));
+
+        //srarts-with -> //*[starts-with(@attr,'StartText')]
+        //элемент <label>, у которого атрибут for начинается с текста "ci".
+        driver.findElement(By.xpath("//label[starts-with(@for,'ci')]"));
+
+        //move up
+        driver.findElement(By.xpath("//a[@class='navigation-link']/.."));
+
+        //parent - roditel'
+        driver.findElement(By.xpath("//h1/parent::*"));
+        driver.findElement(By.xpath("//h1/parent::div"));
+        driver.findElement(By.xpath("//h1/.."));
+
+        //ancestor - predki
+        driver.findElement(By.xpath("//h1/ancestor::*"));
+        driver.findElement(By.xpath("//h1/ancestor::div"));
+        driver.findElement(By.xpath("//h1/ancestor::div[2]"));
+
+        //following-sibling
+        driver.findElement(By.xpath("//h1/following-sibling::form"));
+
+    }
 }
 
