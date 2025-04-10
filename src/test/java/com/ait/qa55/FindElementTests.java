@@ -138,6 +138,9 @@ public class FindElementTests {
         //following-sibling
         driver.findElement(By.xpath("//h1/following-sibling::form"));
 
+        //preceding-sibling - do tekushego na lyubom urovne
+        driver.findElement(By.xpath("//h2/preceding-sibling::*"));
+
     }
 }
 
